@@ -47,7 +47,8 @@ export default function CanvasArea() {
             <Cropper
                 src={image}
                 style={{ height: 400, width: "100%" }}
-                preview=".crop-preview" />
+                preview=".crop-preview"
+                initialAspectRatio={16 / 9} />
             </div>
             
             
