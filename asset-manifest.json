@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-image-cropper/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/react-image-cropper/static/js/main.e53f4026.chunk.js",
-    "main.js.map": "/react-image-cropper/static/js/main.e53f4026.chunk.js.map",
+    "main.css": "/react-image-cropper/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/react-image-cropper/static/js/main.e6bac6ea.chunk.js",
+    "main.js.map": "/react-image-cropper/static/js/main.e6bac6ea.chunk.js.map",
     "runtime-main.js": "/react-image-cropper/static/js/runtime-main.5ead478c.js",
     "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.5ead478c.js.map",
     "static/js/2.2c050849.chunk.js": "/react-image-cropper/static/js/2.2c050849.chunk.js",
@@ -10,14 +10,13 @@
     "static/js/3.9de65dc5.chunk.js": "/react-image-cropper/static/js/3.9de65dc5.chunk.js",
     "static/js/3.9de65dc5.chunk.js.map": "/react-image-cropper/static/js/3.9de65dc5.chunk.js.map",
     "index.html": "/react-image-cropper/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/react-image-cropper/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.2c050849.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.2c050849.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/react-image-cropper/static/media/logo.6ce24c58.svg"
+    "static/css/main.ea1455b2.chunk.css.map": "/react-image-cropper/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.2c050849.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.2c050849.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5ead478c.js",
     "static/js/2.2c050849.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.e53f4026.chunk.js"
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.e6bac6ea.chunk.js"
   ]
 }
