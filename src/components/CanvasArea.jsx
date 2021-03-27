@@ -30,9 +30,18 @@ export default function CanvasArea() {
     return (
         <div className="container">
             <div className="row">
-                <h2>Canvas Area</h2>
-                <input type="file" onChange={onFileChange} />
-                <Preview />
+                {/* Empty row to add padding to top of container */}
+            </div>
+            <div className="row">
+                <div className="col xl6">
+                    <h2>Canvas Area</h2>
+                    <input type="file" onChange={onFileChange} />
+                </div>
+                <div className="col xl6">
+                    <Preview />
+                </div>
+                
+                
             </div>
             <div className="row">
             <Cropper
