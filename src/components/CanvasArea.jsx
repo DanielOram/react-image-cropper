@@ -1,8 +1,11 @@
-import { render } from '@testing-library/react';
 import React from 'react';
+import Preview from './Preview';
 
 export default function CanvasArea() {
     return (
-        <h2>Canvas Area</h2>
+        <div>
+            <h2>Canvas Area</h2>
+            <Preview />
+        </div>
     )
 }
