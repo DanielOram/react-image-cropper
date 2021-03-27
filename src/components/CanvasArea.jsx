@@ -12,7 +12,7 @@ export default function CanvasArea() {
     // CanvasArea is in charge of handling all data used by the imagecropper and the preview component
     const [image, setImage] = useState(defaultSrc);
 
-    const onChange = (event) => {
+    const onFileChange = (event) => {
         event.preventDefault();
         let files;
         if (event.dataTransfer) {
@@ -30,7 +30,7 @@ export default function CanvasArea() {
     return (
         <div>
             <h2>Canvas Area</h2>
-            <input type="file" onChange={onChange} />
+            <input type="file" onChange={onFileChange} />
             <Cropper
                 src={image}
                 style={{ height: 400, width: "100%" }} />
