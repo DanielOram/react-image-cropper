@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>React Image Cropper</h1>
       <CanvasArea />
       <Footer />
     </div>

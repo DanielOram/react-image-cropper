@@ -28,13 +28,21 @@ export default function CanvasArea() {
     };
     
     return (
-        <div>
-            <h2>Canvas Area</h2>
-            <input type="file" onChange={onFileChange} />
+        <div className="container">
+            <div className="row">
+                <h2>Canvas Area</h2>
+                <input type="file" onChange={onFileChange} />
+                <Preview />
+            </div>
+            <div className="row">
             <Cropper
                 src={image}
-                style={{ height: 400, width: "100%" }} />
-            <Preview />
+                style={{ height: 400, width: "100%" }}
+                preview=".crop-preview" />
+            </div>
+            
+            
+            
             <DownLoadModal />
         </div>
     )
