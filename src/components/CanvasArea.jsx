@@ -4,7 +4,7 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 
 import Preview from './Preview';
-import DownLoadModal from './DownLoadModal';
+// import DownLoadModal from './DownLoadModal';
 
 const defaultSrc = "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
 
@@ -15,6 +15,9 @@ export default function CanvasArea() {
     const [aspectRatio, setAspectRatio] = useState(1);
 
     const [cropper, setCropper] = useState();
+    const [cropData, setCropData] = useState("#");
+
+    const [hasCropped, setHasCropped] = useState(false);
 
     const onFileChange = (event) => {
         event.preventDefault();
@@ -29,22 +32,19 @@ export default function CanvasArea() {
             setImage(reader.result);
         };
         reader.readAsDataURL(files[0]);
+        setHasCropped(false);
     };
 
+    const getCropData = () => {
+        if (cropper !== "undefined") {
+            console.log('getCropData');
+            setHasCropped(true);
+            setCropData(cropper.getCroppedCanvas().toDataURL());
+        }
+      };
+
     const handleAspectRatioChange = (newAspectRatio) => {
-
-        console.log('handleAspectRatioChange ' + newAspectRatio);
-
-        // data = {
-
-        // }
-
-        
-        // setAspectRatio(newAspectRatio);
         cropper.setAspectRatio(newAspectRatio);
-        // cropper.reset();
-        // cropper.clear();
-        
     };
 
     const handleReset = () => {
@@ -69,9 +69,11 @@ export default function CanvasArea() {
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
                     <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
-                    <br/>
-                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
+                    {/* Modal Trigger */}
+                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1" onClick={getCropData}>Crop Image</a>
+                    {hasCropped && 
+                        <a className="waves-effect waves-light btn" onClick={() => setHasCropped(false)}>Back</a>
+                    }
                     {/* <label>Aspect Ratio</label>
                     <input type="text" id="fname" name="fname" />
                     <input type="text" id="lname" name="lname" /> */}
@@ -84,20 +86,25 @@ export default function CanvasArea() {
             </div>
             <div className="row">
                     {/* <CropperComponent src={image} aspectRatio={aspectRatio} /> */}
-                    <Cropper
-                        src={image}
-                        style={{ height: 400, width: "100%" }}
-                        preview=".crop-preview"
-                        initialAspectRatio={aspectRatio}
-                        aspectRatio={aspectRatio}
-                        onInitialized={(instance) => {
-                            setCropper(instance);
-                        }} />
+                    {hasCropped &&
+                        <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
+                    }
+                    {!hasCropped && 
+                        <Cropper
+                            src={image}
+                            style={{ height: 400, width: "100%" }}
+                            preview=".crop-preview"
+                            initialAspectRatio={aspectRatio}
+                            aspectRatio={aspectRatio}
+                            onInitialized={(instance) => {
+                                setCropper(instance);
+                            }} />
+                    }
+                    
             </div>
             
             
-            
-            <DownLoadModal />
+            {/* <DownLoadModal croppedImage={cropData}/> */}
         </div>
     )
 }
