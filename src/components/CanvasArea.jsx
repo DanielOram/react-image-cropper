@@ -61,7 +61,18 @@ export default function CanvasArea() {
             <div className="row">
                 <div className="col xl6">
                     <h2>Canvas Area</h2>
-                    <input type="file" onChange={onFileChange} />
+                    <div className="file-field input-field col xl12">
+                        <div className= "btn">
+                            <span>Choose Image</span>
+                            <input type="file" onChange={onFileChange} />
+                        </div>
+
+                        <div className= "file-path-wrapper">
+                            <input className= "file-path validate" type = "text"
+                                placeholder = "File Name" />
+                        </div>                       
+                    </div>
+
 
                     
                     <br></br>
