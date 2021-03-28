@@ -69,6 +69,8 @@ export default function CanvasArea() {
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
                     <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
+                    <br/>
+                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
                     {/* <label>Aspect Ratio</label>
                     <input type="text" id="fname" name="fname" />
