@@ -16,6 +16,7 @@ export default function CanvasArea() {
 
     const [cropper, setCropper] = useState();
     const [cropData, setCropData] = useState("#");
+    const [containerData, setContainerData] = useState({width: 0, height: 0});
 
     const [hasCropped, setHasCropped] = useState(false);
 
@@ -71,7 +72,7 @@ export default function CanvasArea() {
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
                     <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
                     {/* Modal Trigger */}
-                    <a className="waves-effect waves-light btn modal-trigger" href="#modal1" onClick={getCropData}>Crop Image</a>
+                    <a className="waves-effect waves-light btn modal-trigger" onClick={getCropData}>Crop Image</a>
                     {hasCropped && 
                         <a className="waves-effect waves-light btn" onClick={() => setHasCropped(false)}>Back</a>
                     }
@@ -87,19 +88,37 @@ export default function CanvasArea() {
             </div>
             <div className="row">
                     {/* <CropperComponent src={image} aspectRatio={aspectRatio} /> */}
-                    {hasCropped &&
-                        <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
+                    {hasCropped && 
+                        <div className="center-align">
+                            <div className="row">
+                                <div className="col xl12">
+                                    <div style={{width: "100%", backgroundColor: "green", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                        <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col xl12">
+                                    <a className="waves-effect waves-light btn" >Download Image</a>
+                                </div>
+                            </div>
+                        </div>
+                        
                     }
                     {!hasCropped && 
-                        <Cropper
-                            src={image}
-                            style={{ height: 400, width: "100%" }}
-                            preview=".crop-preview"
-                            initialAspectRatio={aspectRatio}
-                            aspectRatio={aspectRatio}
-                            onInitialized={(instance) => {
-                                setCropper(instance);
-                            }} />
+                        <div className="col xl12">
+                            <Cropper
+                                src={image}
+                                style={{ height: 400, width: "100%" }}
+                                preview=".crop-preview"
+                                initialAspectRatio={aspectRatio}
+                                aspectRatio={aspectRatio}
+                                onInitialized={(instance) => {
+                                    setCropper(instance);
+                                    setContainerData(instance.getContainerData());
+                                }} 
+                            />
+                        </div>
                     }
                     
             </div>
@@ -122,5 +141,13 @@ const CropperComponent = ({src, aspectRatio}) => {
                 onInitialized={(instance) => {
                     
                   }} />
+    )
+}
+
+const CroppedImage = (cropData, containerData) => {
+    return (
+        <div style={{width: "100%", height: containerData.height}}>
+            <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
+        </div>
     )
 }
