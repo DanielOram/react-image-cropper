@@ -12,6 +12,10 @@ export default function CanvasArea() {
     // CanvasArea is in charge of handling all data used by the imagecropper and the preview component
     const [image, setImage] = useState(defaultSrc);
 
+    const [aspectRatio, setAspectRatio] = useState(1);
+
+    const [cropper, setCropper] = useState();
+
     const onFileChange = (event) => {
         event.preventDefault();
         let files;
@@ -26,6 +30,26 @@ export default function CanvasArea() {
         };
         reader.readAsDataURL(files[0]);
     };
+
+    const handleAspectRatioChange = (newAspectRatio) => {
+
+        console.log('handleAspectRatioChange ' + newAspectRatio);
+
+        // data = {
+
+        // }
+
+        
+        // setAspectRatio(newAspectRatio);
+        cropper.setAspectRatio(newAspectRatio);
+        // cropper.reset();
+        // cropper.clear();
+        
+    };
+
+    const handleReset = () => {
+        cropper.reset();
+    }
     
     return (
         <div className="container">
@@ -36,6 +60,19 @@ export default function CanvasArea() {
                 <div className="col xl6">
                     <h2>Canvas Area</h2>
                     <input type="file" onChange={onFileChange} />
+
+                    
+                    <br></br>
+                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(1)}>1:1</a>
+                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
+                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
+                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
+                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
+                    <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
+
+                    {/* <label>Aspect Ratio</label>
+                    <input type="text" id="fname" name="fname" />
+                    <input type="text" id="lname" name="lname" /> */}
                 </div>
                 <div className="col xl6">
                     <Preview />
@@ -44,16 +81,36 @@ export default function CanvasArea() {
                 
             </div>
             <div className="row">
-            <Cropper
-                src={image}
-                style={{ height: 400, width: "100%" }}
-                preview=".crop-preview"
-                initialAspectRatio={16 / 9} />
+                    {/* <CropperComponent src={image} aspectRatio={aspectRatio} /> */}
+                    <Cropper
+                        src={image}
+                        style={{ height: 400, width: "100%" }}
+                        preview=".crop-preview"
+                        initialAspectRatio={aspectRatio}
+                        aspectRatio={aspectRatio}
+                        onInitialized={(instance) => {
+                            setCropper(instance);
+                        }} />
             </div>
             
             
             
             <DownLoadModal />
         </div>
+    )
+}
+
+// pass attributes to this component -> figure out if component will be redrawn with new aspectRatio
+const CropperComponent = ({src, aspectRatio}) => {
+    return (
+        <Cropper
+                src={src}
+                style={{ height: 400, width: "100%" }}
+                preview=".crop-preview"
+                initialAspectRatio={aspectRatio}
+                aspectRatio={aspectRatio}
+                onInitialized={(instance) => {
+                    
+                  }} />
     )
 }
