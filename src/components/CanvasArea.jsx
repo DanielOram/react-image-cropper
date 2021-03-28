@@ -48,6 +48,7 @@ export default function CanvasArea() {
     };
 
     const handleReset = () => {
+        setHasCropped(false);
         cropper.reset();
     }
     
