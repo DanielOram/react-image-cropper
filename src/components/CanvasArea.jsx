@@ -16,7 +16,6 @@ export default function CanvasArea() {
 
     const [cropper, setCropper] = useState();
     const [cropData, setCropData] = useState("#");
-    const [containerData, setContainerData] = useState({width: 0, height: 0});
 
     const [hasCropped, setHasCropped] = useState(false);
 
@@ -124,7 +123,6 @@ export default function CanvasArea() {
                                 aspectRatio={aspectRatio}
                                 onInitialized={(instance) => {
                                     setCropper(instance);
-                                    setContainerData(instance.getContainerData());
                                 }} 
                             />
                         </div>
