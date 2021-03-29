@@ -58,7 +58,7 @@ export default function CanvasArea() {
                 {/* Empty row to add padding to top of container */}
             </div>
             <div className="row">
-                <div className="col xl6">
+                <div className="col xl6 l6">
                     <div className="row">
                         {/* <h2>Canvas Area</h2> */}
                         <div className="col xl12">
@@ -81,14 +81,14 @@ export default function CanvasArea() {
                     <input type="text" id="fname" name="fname" />
                     <input type="text" id="lname" name="lname" /> */}
                 </div>
-                <div className="col xl6">
+                <div className="col xl6 l6">
                     <Preview />
                 </div>
                 
                 
             </div>
             <div className="row">
-                <div className="col xl6">
+                <div className="col xl6 l8">
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(1)}>1:1</a>
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
@@ -96,7 +96,7 @@ export default function CanvasArea() {
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
                     <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
                 </div>
-                <div className="col xl6">
+                <div className="col xl6 l4">
                 {!hasCropped &&
                     <a className="waves-effect waves-light btn" style={{float: "right"}} onClick={getCropData}>Crop Image</a>
                 }
@@ -112,14 +112,14 @@ export default function CanvasArea() {
                     {hasCropped && 
                         <div className="center-align">
                             <div className="row">
-                                <div className="col xl12">
+                                <div className="col xl12 l12">
                                     <div style={{width: "100%", backgroundColor: "green", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                         <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col xl12">
+                                <div className="col xl12 l12">
                                     <a className="waves-effect waves-light btn" >Download Image</a>
                                 </div>
                             </div>
@@ -142,6 +142,14 @@ export default function CanvasArea() {
                     }
                     
             </div>
+
+            {/* Divs for responsiveness testing */}
+            <div className="row">
+                <div style={{backgroundColor: "blue", color: "white"}} className="col xl12 l1 m12 s1">
+                    Responsiveness testing
+                </div>
+            </div>
+
             
             
             {/* <DownLoadModal croppedImage={cropData}/> */}
