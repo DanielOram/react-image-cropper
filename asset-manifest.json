@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/react-image-cropper/static/css/main.ea1455b2.chunk.css",
-    "main.js": "/react-image-cropper/static/js/main.e6bac6ea.chunk.js",
-    "main.js.map": "/react-image-cropper/static/js/main.e6bac6ea.chunk.js.map",
-    "runtime-main.js": "/react-image-cropper/static/js/runtime-main.5ead478c.js",
-    "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.5ead478c.js.map",
-    "static/js/2.2c050849.chunk.js": "/react-image-cropper/static/js/2.2c050849.chunk.js",
-    "static/js/2.2c050849.chunk.js.map": "/react-image-cropper/static/js/2.2c050849.chunk.js.map",
-    "static/js/3.9de65dc5.chunk.js": "/react-image-cropper/static/js/3.9de65dc5.chunk.js",
-    "static/js/3.9de65dc5.chunk.js.map": "/react-image-cropper/static/js/3.9de65dc5.chunk.js.map",
+    "main.css": "/react-image-cropper/static/css/main.2a380e00.chunk.css",
+    "main.js": "/react-image-cropper/static/js/main.5738a359.chunk.js",
+    "main.js.map": "/react-image-cropper/static/js/main.5738a359.chunk.js.map",
+    "runtime-main.js": "/react-image-cropper/static/js/runtime-main.2410ab3c.js",
+    "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.2410ab3c.js.map",
+    "static/css/2.fe2a3aa7.chunk.css": "/react-image-cropper/static/css/2.fe2a3aa7.chunk.css",
+    "static/js/2.446d7d5e.chunk.js": "/react-image-cropper/static/js/2.446d7d5e.chunk.js",
+    "static/js/2.446d7d5e.chunk.js.map": "/react-image-cropper/static/js/2.446d7d5e.chunk.js.map",
+    "static/js/3.f31633eb.chunk.js": "/react-image-cropper/static/js/3.f31633eb.chunk.js",
+    "static/js/3.f31633eb.chunk.js.map": "/react-image-cropper/static/js/3.f31633eb.chunk.js.map",
     "index.html": "/react-image-cropper/index.html",
-    "static/css/main.ea1455b2.chunk.css.map": "/react-image-cropper/static/css/main.ea1455b2.chunk.css.map",
-    "static/js/2.2c050849.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.2c050849.chunk.js.LICENSE.txt"
+    "static/css/2.fe2a3aa7.chunk.css.map": "/react-image-cropper/static/css/2.fe2a3aa7.chunk.css.map",
+    "static/css/main.2a380e00.chunk.css.map": "/react-image-cropper/static/css/main.2a380e00.chunk.css.map",
+    "static/js/2.446d7d5e.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.446d7d5e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5ead478c.js",
-    "static/js/2.2c050849.chunk.js",
-    "static/css/main.ea1455b2.chunk.css",
-    "static/js/main.e6bac6ea.chunk.js"
+    "static/js/runtime-main.2410ab3c.js",
+    "static/css/2.fe2a3aa7.chunk.css",
+    "static/js/2.446d7d5e.chunk.js",
+    "static/css/main.2a380e00.chunk.css",
+    "static/js/main.5738a359.chunk.js"
   ]
 }
