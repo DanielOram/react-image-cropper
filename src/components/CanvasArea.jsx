@@ -57,10 +57,9 @@ export default function CanvasArea() {
             <div className="row">
                 {/* Empty row to add padding to top of container */}
             </div>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col xl6 l6 m4 s4">
                     <div className="row">
-                        {/* <h2>Canvas Area</h2> */}
                         <div className="col xl12">
                             <div className="">
                                 <div className= "btn file-field input-field">
@@ -78,40 +77,14 @@ export default function CanvasArea() {
                         
                     </div>
                     
-                    
-                    
-                    {/* Modal Trigger */}
-                    
-                    
-                    {/* <label>Aspect Ratio</label>
-                    <input type="text" id="fname" name="fname" />
-                    <input type="text" id="lname" name="lname" /> */}
                 </div>
-                <div className="col xl6 l6 m8 s8">
-                    <Preview />
-                </div>
+                
                 
                 
             </div>
-            <div className="row">
-                <div className="col xl6 l8 m8">
-                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(1)}>1:1</a>
-                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
-                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
-                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
-                    <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
-                    <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
-                </div>
-                <div className="col xl6 l4 m4">
-                {!hasCropped &&
-                    <a className="waves-effect waves-light btn" style={{float: "right"}} onClick={getCropData}>Crop Image</a>
-                }
-                {hasCropped && 
-                    <a className="waves-effect waves-light btn" style={{float: "right"}} onClick={() => setHasCropped(false)}>Back</a>
-                }
-                </div>
-                
-            </div>
+             */}
+
+
 
             <div className="row">
                     {/* <CropperComponent src={image} aspectRatio={aspectRatio} /> */}
@@ -134,6 +107,7 @@ export default function CanvasArea() {
                     }
                     {!hasCropped && 
                         <div className="col xl12">
+                            <div className="col xl8">
                             <Cropper
                                 src={image}
                                 style={{ height: 400, width: "100%" }}
@@ -144,9 +118,52 @@ export default function CanvasArea() {
                                     setCropper(instance);
                                 }} 
                             />
+                            </div>
+                            <div className="col xl4">
+                                <Preview />
+                                <div className="">
+                                    <div className="">
+                                        <div className= "btn file-field input-field" style={{width: "100%"}}>
+                                            <span>Choose Image</span>
+                                            <input type="file" onChange={onFileChange} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="" style={{display: "none"}}>
+                                    <div className= "file-path-wrapper">
+                                        <input className= "file-path validate" type = "text"
+                                            placeholder = "File Name" />
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     }
                     
+            </div>
+
+
+            <div className="row">
+                {!hasCropped && 
+                    <div className="col xl6 l8 m8">
+                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(1)}>1:1</a>
+                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
+                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
+                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
+                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
+                        <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
+                    </div>
+                }
+                
+                <div className="col xl6 l4 m4">
+                {!hasCropped &&
+                    <a className="waves-effect waves-light btn" style={{float: "right"}} onClick={getCropData}>Crop Image</a>
+                }
+                {hasCropped && 
+                    <a className="waves-effect waves-light btn" style={{float: "right"}} onClick={() => setHasCropped(false)}>Back</a>
+                }
+                </div>
+                
             </div>
 
             {/* Divs for responsiveness testing */}
