@@ -66,11 +66,6 @@ export default function CanvasArea() {
                             <span>Choose Image</span>
                             <input type="file" onChange={onFileChange} />
                         </div>
-
-                        <div className= "file-path-wrapper">
-                            <input className= "file-path validate" type = "text"
-                                placeholder = "File Name" />
-                        </div>                       
                     </div>
 
 
@@ -83,7 +78,10 @@ export default function CanvasArea() {
                     <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
                     <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
                     {/* Modal Trigger */}
-                    <a className="waves-effect waves-light btn modal-trigger" onClick={getCropData}>Crop Image</a>
+                    {!hasCropped && 
+                        <a className="waves-effect waves-light btn modal-trigger" onClick={getCropData}>Crop Image</a>
+                    }
+                    
                     {hasCropped && 
                         <a className="waves-effect waves-light btn" onClick={() => setHasCropped(false)}>Back</a>
                     }
