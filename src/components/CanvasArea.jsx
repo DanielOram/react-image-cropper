@@ -62,11 +62,17 @@ export default function CanvasArea() {
                     <div className="row">
                         {/* <h2>Canvas Area</h2> */}
                         <div className="col xl12">
-                            <div className="file-field input-field">
-                                <div className= "btn">
+                            <div className="">
+                                <div className= "btn file-field input-field">
                                     <span>Choose Image</span>
                                     <input type="file" onChange={onFileChange} />
                                 </div>
+                            </div>
+                        </div>
+                        <div className="col xl12" style={{display: "none"}}>
+                            <div className= "file-path-wrapper">
+                                <input className= "file-path validate" type = "text"
+                                    placeholder = "File Name" />
                             </div>
                         </div>
                         
@@ -144,11 +150,11 @@ export default function CanvasArea() {
             </div>
 
             {/* Divs for responsiveness testing */}
-            <div className="row">
+            {/* <div className="row">
                 <div style={{backgroundColor: "blue", color: "white"}} className="col xl12 l1 m12 s1">
                     Responsiveness testing
                 </div>
-            </div>
+            </div> */}
 
             
             
