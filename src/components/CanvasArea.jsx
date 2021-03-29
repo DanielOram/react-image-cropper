@@ -126,7 +126,7 @@ export default function CanvasArea() {
                             </div>
                             <div className="row">
                                 <div className="col xl12 l12 m12 s12">
-                                    <a className="waves-effect waves-light btn" >Download Image</a>
+                                    <a className="waves-effect waves-light btn" href={image} download="cropped.png">Download Image</a>
                                 </div>
                             </div>
                         </div>
