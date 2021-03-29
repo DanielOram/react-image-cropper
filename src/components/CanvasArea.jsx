@@ -58,7 +58,7 @@ export default function CanvasArea() {
                 {/* Empty row to add padding to top of container */}
             </div>
             <div className="row">
-                <div className="col xl6 l6 m4">
+                <div className="col xl6 l6 m4 s4">
                     <div className="row">
                         {/* <h2>Canvas Area</h2> */}
                         <div className="col xl12">
@@ -81,7 +81,7 @@ export default function CanvasArea() {
                     <input type="text" id="fname" name="fname" />
                     <input type="text" id="lname" name="lname" /> */}
                 </div>
-                <div className="col xl6 l6 m8">
+                <div className="col xl6 l6 m8 s8">
                     <Preview />
                 </div>
                 
@@ -112,14 +112,14 @@ export default function CanvasArea() {
                     {hasCropped && 
                         <div className="center-align">
                             <div className="row">
-                                <div className="col xl12 l12 m12">
+                                <div className="col xl12 l12 m12 s12">
                                     <div style={{width: "100%", backgroundColor: "green", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                         <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col xl12 l12 m12">
+                                <div className="col xl12 l12 m12 s12">
                                     <a className="waves-effect waves-light btn" >Download Image</a>
                                 </div>
                             </div>
