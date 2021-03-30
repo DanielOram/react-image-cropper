@@ -175,11 +175,11 @@ export default function CanvasArea() {
             </div>
 
             {/* Divs for responsiveness testing */}
-            <div className="row">
+            {/* <div className="row">
                 <div style={{backgroundColor: "blue", color: "white"}} className="col xl12 l1 m12 s1">
                     Responsiveness testing
                 </div>
-            </div>
+            </div> */}
 
             {/* Modal */}
             <InfoModal />
