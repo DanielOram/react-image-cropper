@@ -104,7 +104,7 @@ export default function CanvasArea() {
                             </div>
                             <div className="row">
                                 <div className="col xl12 l12 m12 s12">
-                                    <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={() => setHasCropped(false)}>Back</a>
+                                    <a className="waves-effect waves-light btn teal darken-4" style={{width: "100%"}} onClick={() => setHasCropped(false)}>Back</a>
                                 </div>
                             </div>
                         </div>
@@ -130,7 +130,7 @@ export default function CanvasArea() {
                                 </div>
                                 <div className="">
                                     <div className="">
-                                        <div className= "btn file-field input-field" style={{width: "100%"}}>
+                                        <div className= "btn file-field input-field teal darken-4" style={{width: "100%"}}>
                                             <span>Choose Image</span>
                                             <input type="file" onChange={onFileChange} />
                                         </div>
@@ -160,7 +160,7 @@ export default function CanvasArea() {
                                 <div className="row">
                                     <div className="col xl12 l12 m12 s12">
                                         {!hasCropped &&
-                                            <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={getCropData}>Crop Image</a>
+                                            <a className="black-text waves-effect waves-light btn teal lighten-4" style={{width: "100%"}} onClick={getCropData}>Crop Image</a>
                                         }
                                         
                                     </div>
