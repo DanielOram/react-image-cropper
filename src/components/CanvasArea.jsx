@@ -135,6 +135,35 @@ export default function CanvasArea() {
                                             placeholder = "File Name" />
                                     </div>
                                 </div>
+
+                                {!hasCropped && 
+                                    <>
+                                        <div className="row">
+                                            <div className="col xl12">
+                                            <a className="waves-effect waves-light btn col xl3" style={{textAlign: 'center'}} onClick={() => handleAspectRatioChange(1)}>1:1</a>
+                                            <a className="waves-effect waves-light btn col xl3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
+                                            <a className="waves-effect waves-light btn col xl3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
+                                            <a className="waves-effect waves-light btn col xl3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
+                                            <a className="waves-effect waves-light btn col xl6" onClick={() => handleAspectRatioChange({})}>freeform</a>
+                                            <a className="waves-effect waves-light btn col xl6" onClick={handleReset}>reset</a>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </>
+                                }
+                                <div className="row">
+                                    <div className="col xl12">
+                                        {!hasCropped &&
+                                            <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={getCropData}>Crop Image</a>
+                                        }
+                                        {hasCropped && 
+                                            <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={() => setHasCropped(false)}>Back</a>
+                                        }
+                                    </div>
+                                    
+                                </div>
+
                             </div>
                             
                         </div>
@@ -143,17 +172,7 @@ export default function CanvasArea() {
             </div>
 
 
-            <div className="row">
-                {!hasCropped && 
-                    <div className="col xl6 l8 m8">
-                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(1)}>1:1</a>
-                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
-                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
-                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
-                        <a className="waves-effect waves-light btn" onClick={() => handleAspectRatioChange({})}>freeform</a>
-                        <a className="waves-effect waves-light btn" onClick={handleReset}>reset</a>
-                    </div>
-                }
+            {/* <div className="row">
                 
                 <div className="col xl6 l4 m4">
                 {!hasCropped &&
@@ -164,14 +183,14 @@ export default function CanvasArea() {
                 }
                 </div>
                 
-            </div>
+            </div> */}
 
             {/* Divs for responsiveness testing */}
-            {/* <div className="row">
+            <div className="row">
                 <div style={{backgroundColor: "blue", color: "white"}} className="col xl12 l1 m12 s1">
                     Responsiveness testing
                 </div>
-            </div> */}
+            </div>
 
             
             
