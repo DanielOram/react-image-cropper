@@ -12,9 +12,10 @@ export default function Footer() {
               <div className="col l4 offset-l2 s12">
                 <h5 className="white-text">Links</h5>
                 <ul>
-                  <li><a className="grey-text text-lighten-3" href="#!">About Me</a></li>
+                  {/* <li><a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/danieloram1/">About Me</a></li> */}
                   <li><a className="grey-text text-lighten-3" href="https://github.com/DanielOram/react-image-cropper">Github</a></li>
                   <li><a className="grey-text text-lighten-3" href="https://stackoverflow.com/users/4486146/danoram">StackOverflow</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://www.linkedin.com/in/danieloram1/">Linked In</a></li>
                   
                 </ul>
               </div>
