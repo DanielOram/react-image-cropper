@@ -58,37 +58,7 @@ export default function CanvasArea() {
             <div className="row">
                 {/* Empty row to add padding to top of container */}
             </div>
-            {/* <div className="row">
-                <div className="col xl6 l6 m4 s4">
-                    <div className="row">
-                        <div className="col xl12">
-                            <div className="">
-                                <div className= "btn file-field input-field">
-                                    <span>Choose Image</span>
-                                    <input type="file" onChange={onFileChange} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col xl12" style={{display: "none"}}>
-                            <div className= "file-path-wrapper">
-                                <input className= "file-path validate" type = "text"
-                                    placeholder = "File Name" />
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                
-                
-                
-            </div>
-             */}
-
-
-
             <div className="row">
-                    {/* <CropperComponent src={image} aspectRatio={aspectRatio} /> */}
                     {hasCropped && 
                         <div className="center-align">
                             <div className="row">
@@ -174,41 +144,7 @@ export default function CanvasArea() {
                     }
                     
             </div>
-
-            {/* Divs for responsiveness testing */}
-            {/* <div className="row">
-                <div style={{backgroundColor: "blue", color: "white"}} className="col xl12 l1 m12 s1">
-                    Responsiveness testing
-                </div>
-            </div> */}
-
-            {/* Modal */}
-            <InfoModal />
-            
-        </div>
-    )
-}
-
-// pass attributes to this component -> figure out if component will be redrawn with new aspectRatio
-const CropperComponent = ({src, aspectRatio}) => {
-    return (
-        <Cropper
-                src={src}
-                style={{ height: 400, width: "100%" }}
-                preview=".crop-preview"
-                initialAspectRatio={aspectRatio}
-                aspectRatio={aspectRatio}
-                onInitialized={(instance) => {
-                    
-                  }} />
-    )
-}
-
-// Not used
-const CroppedImage = (cropData, containerData) => {
-    return (
-        <div style={{width: "100%", height: containerData.height}}>
-            <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
+            <InfoModal />      
         </div>
     )
 }
