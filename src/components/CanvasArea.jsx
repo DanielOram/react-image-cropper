@@ -119,8 +119,10 @@ export default function CanvasArea() {
                                 }} 
                             />
                             </div>
-                            <div className="col xl4 l4">
-                                <Preview />
+                            <div className="col xl4 l4 m12">
+                                <div className="hide-on-med-and-down">
+                                    <Preview />
+                                </div>
                                 <div className="">
                                     <div className="">
                                         <div className= "btn file-field input-field" style={{width: "100%"}}>
@@ -139,21 +141,19 @@ export default function CanvasArea() {
                                 {!hasCropped && 
                                     <>
                                         <div className="row">
-                                            <div className="col xl12 l12">
-                                            <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: 'center'}} onClick={() => handleAspectRatioChange(1)}>1:1</a>
-                                            <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
-                                            <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
-                                            <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
-                                            <a className="waves-effect waves-light btn col xl6 l6" onClick={() => handleAspectRatioChange({})}>freeform</a>
-                                            <a className="waves-effect waves-light btn col xl6 l6" onClick={handleReset}>reset</a>
+                                            <div className="col xl12 l12 m12">
+                                                <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: 'center'}} onClick={() => handleAspectRatioChange(1)}>1:1</a>
+                                                <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(4/3)}>4:3</a>
+                                                <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(9/16)}>9:16</a>
+                                                <a className="waves-effect waves-light btn col xl3 l3" style={{textAlign: "center"}} onClick={() => handleAspectRatioChange(16/9)}>16:9</a>
+                                                <a className="waves-effect waves-light btn col xl6 l6" onClick={() => handleAspectRatioChange({})}>freeform</a>
+                                                <a className="waves-effect waves-light btn col xl6 l6" onClick={handleReset}>reset</a>
                                             </div>
-                                            
-                                            
                                         </div>
                                     </>
                                 }
                                 <div className="row">
-                                    <div className="col xl12 l12">
+                                    <div className="col xl12 l12 m12">
                                         {!hasCropped &&
                                             <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={getCropData}>Crop Image</a>
                                         }
