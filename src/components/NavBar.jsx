@@ -13,6 +13,7 @@ export default function NavBar() {
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#">About Me</a></li>
                         <li><a href="#">Github</a></li>
+                        <li><a href="#">StackOverflow</a></li>
                     </ul>
                 </div>
             </nav>
@@ -20,6 +21,7 @@ export default function NavBar() {
                 <li><a data-target="modal1" class="waves-effect waves-light btn btn-large modal-trigger"><span>How to Use<i class="material-icons right">help_outline</i></span></a></li>
                 <li><a href="#">About Me<i class="material-icons right">info_outline</i></a></li>
                 <li><a href="#">Github<i class="material-icons right">code</i></a></li>
+                <li><a href="#">StackOverflow<i class="material-icons right">code</i></a></li>
             </ul>
         </>
     )
