@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-image-cropper/static/css/main.7696d31e.chunk.css",
-    "main.js": "/react-image-cropper/static/js/main.b098126c.chunk.js",
-    "main.js.map": "/react-image-cropper/static/js/main.b098126c.chunk.js.map",
-    "runtime-main.js": "/react-image-cropper/static/js/runtime-main.2410ab3c.js",
-    "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.2410ab3c.js.map",
+    "main.css": "/react-image-cropper/static/css/main.1e7e837f.chunk.css",
+    "main.js": "/react-image-cropper/static/js/main.268b8754.chunk.js",
+    "main.js.map": "/react-image-cropper/static/js/main.268b8754.chunk.js.map",
+    "runtime-main.js": "/react-image-cropper/static/js/runtime-main.73d428a6.js",
+    "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.73d428a6.js.map",
     "static/css/2.fe2a3aa7.chunk.css": "/react-image-cropper/static/css/2.fe2a3aa7.chunk.css",
-    "static/js/2.91cb3e3c.chunk.js": "/react-image-cropper/static/js/2.91cb3e3c.chunk.js",
-    "static/js/2.91cb3e3c.chunk.js.map": "/react-image-cropper/static/js/2.91cb3e3c.chunk.js.map",
-    "static/js/3.f31633eb.chunk.js": "/react-image-cropper/static/js/3.f31633eb.chunk.js",
-    "static/js/3.f31633eb.chunk.js.map": "/react-image-cropper/static/js/3.f31633eb.chunk.js.map",
+    "static/js/2.60a989f7.chunk.js": "/react-image-cropper/static/js/2.60a989f7.chunk.js",
+    "static/js/2.60a989f7.chunk.js.map": "/react-image-cropper/static/js/2.60a989f7.chunk.js.map",
+    "static/js/3.40a5fa47.chunk.js": "/react-image-cropper/static/js/3.40a5fa47.chunk.js",
+    "static/js/3.40a5fa47.chunk.js.map": "/react-image-cropper/static/js/3.40a5fa47.chunk.js.map",
     "index.html": "/react-image-cropper/index.html",
     "static/css/2.fe2a3aa7.chunk.css.map": "/react-image-cropper/static/css/2.fe2a3aa7.chunk.css.map",
-    "static/css/main.7696d31e.chunk.css.map": "/react-image-cropper/static/css/main.7696d31e.chunk.css.map",
-    "static/js/2.91cb3e3c.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.91cb3e3c.chunk.js.LICENSE.txt"
+    "static/css/main.1e7e837f.chunk.css.map": "/react-image-cropper/static/css/main.1e7e837f.chunk.css.map",
+    "static/js/2.60a989f7.chunk.js.LICENSE.txt": "/react-image-cropper/static/js/2.60a989f7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2410ab3c.js",
+    "static/js/runtime-main.73d428a6.js",
     "static/css/2.fe2a3aa7.chunk.css",
-    "static/js/2.91cb3e3c.chunk.js",
-    "static/css/main.7696d31e.chunk.css",
-    "static/js/main.b098126c.chunk.js"
+    "static/js/2.60a989f7.chunk.js",
+    "static/css/main.1e7e837f.chunk.css",
+    "static/js/main.268b8754.chunk.js"
   ]
 }
