@@ -14,7 +14,7 @@ export default function Footer() {
                 <ul>
                   <li><a className="grey-text text-lighten-3" href="#!">Github</a></li>
                   <li><a className="grey-text text-lighten-3" href="#!">About Me</a></li>
-                  <li><a className="grey-text text-lighten-3" href="#!">StackOverflow</a></li>
+                  <li><a className="grey-text text-lighten-3" href="https://stackoverflow.com/users/4486146/danoram">StackOverflow</a></li>
                   
                 </ul>
               </div>
