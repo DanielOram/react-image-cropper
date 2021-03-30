@@ -99,7 +99,12 @@ export default function CanvasArea() {
                             </div>
                             <div className="row">
                                 <div className="col xl12 l12 m12 s12">
-                                    <a className="waves-effect waves-light btn" style={{width: "100%"}} href={image} download="cropped.png">Download Image</a>
+                                    <a className="waves-effect waves-light btn btn-large" style={{width: "100%"}} href={image} download="cropped.png">Download Image</a>
+                                </div>
+                            </div>
+                            <div className="row">
+                                <div className="col xl12 l12 m12 s12">
+                                    <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={() => setHasCropped(false)}>Back</a>
                                 </div>
                             </div>
                         </div>
@@ -157,9 +162,7 @@ export default function CanvasArea() {
                                         {!hasCropped &&
                                             <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={getCropData}>Crop Image</a>
                                         }
-                                        {hasCropped && 
-                                            <a className="waves-effect waves-light btn" style={{width: "100%"}} onClick={() => setHasCropped(false)}>Back</a>
-                                        }
+                                        
                                     </div>
                                     
                                 </div>
