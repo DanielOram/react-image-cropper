@@ -4,7 +4,7 @@ import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 
 import Preview from './Preview';
-// import DownLoadModal from './DownLoadModal';
+import InfoModal from './InfoModal';
 
 const defaultSrc = "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
 
@@ -178,9 +178,9 @@ export default function CanvasArea() {
                 </div>
             </div>
 
+            {/* Modal */}
+            <InfoModal />
             
-            
-            {/* <DownLoadModal croppedImage={cropData}/> */}
         </div>
     )
 }
@@ -200,6 +200,7 @@ const CropperComponent = ({src, aspectRatio}) => {
     )
 }
 
+// Not used
 const CroppedImage = (cropData, containerData) => {
     return (
         <div style={{width: "100%", height: containerData.height}}>
