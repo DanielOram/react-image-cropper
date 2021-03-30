@@ -92,7 +92,7 @@ export default function CanvasArea() {
                         <div className="center-align">
                             <div className="row">
                                 <div className="col xl12 l12 m12 s12">
-                                    <div style={{width: "100%", backgroundColor: "green", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                    <div className="crop-preview-container" style={{width: "100%", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "50vh" }}>
                                         <img id="croppedImage" style={{ maxWidth: "100%" }} src={cropData} alt="cropped" />
                                     </div>
                                 </div>
