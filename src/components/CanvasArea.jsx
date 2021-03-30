@@ -5,8 +5,9 @@ import "cropperjs/dist/cropper.css";
 
 import Preview from './Preview';
 import InfoModal from './InfoModal';
+import DefaultImage from '../img/oranges.jpg';
 
-const defaultSrc = "https://raw.githubusercontent.com/roadmanfong/react-cropper/master/example/img/child.jpg";
+const defaultSrc = DefaultImage;
 
 export default function CanvasArea() {
     // CanvasArea is in charge of handling all data used by the imagecropper and the preview component
