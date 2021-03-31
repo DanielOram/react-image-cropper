@@ -5,7 +5,7 @@ export default function NavBar() {
         <>
             <nav>
                 <div className="nav-wrapper">
-                    <a href="#" className="brand-logo center"><i className="material-icons">crop</i>React Cropper</a>
+                    <a href="#" className="brand-logo center"><i className="material-icons hide-on-med-and-down">crop</i>React Cropper</a>
                     <ul id="nav-mobile" className="left hide-on-med-and-down">
                         <li><a data-target="modal1" className="waves-effect waves-light btn btn-large modal-trigger"><i className="material-icons">help_outline</i></a></li>
                     </ul>
