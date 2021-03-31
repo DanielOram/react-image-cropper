@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="row">
               <div className="col l6 s12">
                 <h5 className="white-text">Created by Daniel Oram.</h5>
-                <p className="grey-text text-lighten-4">A webapp for cropping and downloading images using React.</p>
+                <p className="grey-text text-lighten-4">A webapp for cropping and downloading images using React and cropperjs.</p>
               </div>
               <div className="col l4 offset-l2 s12">
                 <h5 className="white-text">Links</h5>
