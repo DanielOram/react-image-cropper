@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-image-cropper/static/css/main.1e7e837f.chunk.css",
-    "main.js": "/react-image-cropper/static/js/main.0dc4caf2.chunk.js",
-    "main.js.map": "/react-image-cropper/static/js/main.0dc4caf2.chunk.js.map",
+    "main.js": "/react-image-cropper/static/js/main.d784fae7.chunk.js",
+    "main.js.map": "/react-image-cropper/static/js/main.d784fae7.chunk.js.map",
     "runtime-main.js": "/react-image-cropper/static/js/runtime-main.73d428a6.js",
     "runtime-main.js.map": "/react-image-cropper/static/js/runtime-main.73d428a6.js.map",
     "static/css/2.fe2a3aa7.chunk.css": "/react-image-cropper/static/css/2.fe2a3aa7.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.fe2a3aa7.chunk.css",
     "static/js/2.5ee72c68.chunk.js",
     "static/css/main.1e7e837f.chunk.css",
-    "static/js/main.0dc4caf2.chunk.js"
+    "static/js/main.d784fae7.chunk.js"
   ]
 }
