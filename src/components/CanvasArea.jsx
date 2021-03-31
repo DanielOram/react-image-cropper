@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+
 import Cropper from "react-cropper";
 import "cropperjs/dist/cropper.css";
 
@@ -15,7 +16,12 @@ export default function CanvasArea() {
 
     const [aspectRatio, setAspectRatio] = useState(1);
 
-    const [cropper, setCropper] = useState();
+    // in order to stop error when using useEffect the initial state includes an empty function for reset.
+    const [cropper, setCropper] = useState(
+        {
+            reset: () => {}
+        }
+    );
     const [cropData, setCropData] = useState("#");
 
     const [hasCropped, setHasCropped] = useState(false);
@@ -38,7 +44,6 @@ export default function CanvasArea() {
 
     const getCropData = () => {
         if (cropper !== "undefined") {
-            console.log('getCropData');
             setHasCropped(true);
             setCropData(cropper.getCroppedCanvas().toDataURL());
         }
@@ -83,11 +88,12 @@ export default function CanvasArea() {
                     }
                     {!hasCropped && 
                         <div className="col xl12">
-                            <div className="col xl8 l8">
+                            <div className="col xl8 l8 m12 s12">
                             <Cropper
                                 src={image}
                                 style={{ height: 400, width: "100%" }}
                                 preview=".crop-preview"
+                                // responsive={true}
                                 initialAspectRatio={aspectRatio}
                                 aspectRatio={aspectRatio}
                                 onInitialized={(instance) => {
@@ -144,7 +150,7 @@ export default function CanvasArea() {
                     }
                     
             </div>
-            <InfoModal />      
+            <InfoModal />  
         </div>
     )
 }
